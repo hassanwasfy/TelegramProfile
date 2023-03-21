@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@id/profile_image"
+            android:alpha="0"
+            app:layout_constraintBottom_toBottomOf="@id/constraintLayout"
+            app:layout_constraintEnd_toEndOf="@id/constraintLayout"
+            app:layout_constraintStart_toStartOf="@id/constraintLayout"
+            app:layout_constraintTop_toTopOf="@id/constraintLayout" />
+
+        <Constraint
+            android:id="@id/user_pic"
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:alpha="1"
+            android:scaleX="1"
+            android:scaleY="1"
+            app:layout_constraintBottom_toBottomOf="@id/constraintLayout"
+            app:layout_constraintEnd_toEndOf="@id/constraintLayout"
+            app:layout_constraintStart_toStartOf="@id/constraintLayout"
+            app:layout_constraintTop_toTopOf="@id/constraintLayout" />
+        <Constraint
+            android:id="@+id/name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toBottomOf="@id/constraintLayout"
+            app:layout_constraintStart_toStartOf="@id/constraintLayout" />
+
+        <Constraint
+            android:id="@id/name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="32dp"
+            android:text="@string/the_chance"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/constraintLayout"
+            app:layout_constraintStart_toStartOf="@id/constraintLayout" />
+
+        <Constraint
+            android:id="@id/subs_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/m_subscribers"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:alpha="1"
+            app:layout_constraintTop_toBottomOf="@id/name_label"
+            app:layout_constraintStart_toStartOf="@id/name_label" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/mid">
+        <Constraint
+            android:id="@id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/collapsingToolbarLayoutLargeSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Constraint
+            android:id="@id/profile_image"
+            android:layout_width="92dp"
+            android:layout_height="92dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="24dp"
+            android:alpha="1"
+            app:layout_constraintBottom_toBottomOf="@id/constraintLayout"
+            app:layout_constraintStart_toStartOf="@id/constraintLayout" />
+        <Constraint
+            android:id="@id/user_pic"
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:alpha="0"
+            app:layout_constraintBottom_toBottomOf="@id/constraintLayout"
+            app:layout_constraintEnd_toEndOf="@id/constraintLayout"
+            app:layout_constraintStart_toStartOf="@id/constraintLayout"
+            app:layout_constraintTop_toTopOf="@id/constraintLayout" />
+
+        <Constraint
+            android:id="@id/name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/the_chance"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="64dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/constraintLayout"
+            app:layout_constraintStart_toEndOf="@id/profile_image" />
+
+        <Constraint
+            android:id="@id/subs_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/m_subscribers"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:alpha="1"
+            app:layout_constraintTop_toBottomOf="@id/name_label"
+            app:layout_constraintStart_toStartOf="@id/name_label" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/profile_image"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:alpha="1"
+            app:layout_constraintStart_toEndOf="@id/base_back"
+            app:layout_constraintTop_toTopOf="@id/constraintLayout" />
+
+        <Constraint
+            android:id="@id/user_pic"
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:alpha="0"
+            app:layout_constraintBottom_toBottomOf="@id/constraintLayout"
+            app:layout_constraintEnd_toEndOf="@id/constraintLayout"
+            app:layout_constraintStart_toStartOf="@id/constraintLayout"
+            app:layout_constraintTop_toTopOf="@id/constraintLayout" />
+
+        <Constraint
+            android:id="@id/name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/the_chance"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_marginStart="12dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="@id/constraintLayout"
+            app:layout_constraintBottom_toBottomOf="@id/constraintLayout"
+            app:layout_constraintStart_toEndOf="@id/profile_image" />
+        <Constraint
+            android:id="@id/subs_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/m_subscribers"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:alpha="0"
+            app:layout_constraintTop_toBottomOf="@id/name_label"
+            app:layout_constraintStart_toStartOf="@id/name_label" />
+    </ConstraintSet>
+
+    <Transition
+        app:constraintSetEnd="@id/mid"
+        app:constraintSetStart="@id/start">
+        <KeyFrameSet>
+            <KeyAttribute
+                android:alpha="0"
+                app:curveFit="spline"
+                app:framePosition="10"
+                app:motionTarget="@id/user_pic"
+                app:transformPivotTarget="@id/profile_image" />
+        </KeyFrameSet>
+        <OnSwipe
+            app:onTouchUp="decelerateAndComplete"
+            app:touchAnchorId="@+id/scrollview" />
+    </Transition>
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@id/mid">
+        <OnSwipe
+            app:onTouchUp="decelerateAndComplete"
+            app:touchAnchorId="@id/scrollview" />
+    </Transition>
+</MotionScene>

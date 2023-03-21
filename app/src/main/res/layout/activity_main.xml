@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/activity_main_scene"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:background="@color/telegram"
+        app:layout_constraintBottom_toTopOf="@id/scrollview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/user_pic"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        app:layout_constraintBottom_toBottomOf="@id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="@id/constraintLayout"
+        app:layout_constraintStart_toStartOf="@id/constraintLayout"
+        app:layout_constraintTop_toTopOf="@id/constraintLayout"
+        app:srcCompat="@drawable/user_pic" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/user_pic"
+        app:layout_constraintBottom_toBottomOf="@id/constraintLayout"
+        app:layout_constraintStart_toStartOf="@id/constraintLayout" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/base_back"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:tint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_arrow_back_24" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/more"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:tint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/more" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/the_chance"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/constraintLayout"
+        app:layout_constraintStart_toStartOf="@id/constraintLayout" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/subs_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/m_subscribers"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/name_label"
+        app:layout_constraintStart_toStartOf="@id/name_label" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/telegrambackg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/info_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FAFAFA">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/info_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/info"
+                android:textColor="@color/telegram"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/account_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/t_me_thechance101"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/info_label" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/invite_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/invite_link"
+                android:textColor="#B3B2B2"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/account_link" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/qr_code"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="24dp"
+                android:tint="@color/telegram"
+                app:layout_constraintBottom_toBottomOf="@id/invite_tip"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/account_link"
+                app:srcCompat="@drawable/baseline_qr_code_24" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/h_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/telegrambackg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/invite_tip" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/notification"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/h_divider" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/notification_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="16dp"
+                android:hint="@string/off"
+                android:textColor="#B3B2B2"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/notification" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/notification_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="?attr/minTouchTargetSize"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintBottom_toBottomOf="@id/notification_tip"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/notification" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/v_divider"
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="24dp"
+                android:background="@color/telegrambackg"
+                app:layout_constraintBottom_toBottomOf="@id/notification_tip"
+                app:layout_constraintEnd_toStartOf="@id/notification_switch"
+                app:layout_constraintTop_toTopOf="@id/notification" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/section_divider"
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/telegrambackg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/notification_tip" />
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:elevation="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/section_divider"
+                app:tabMode="fixed">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill"
+                    android:elevation="16dp"
+                    android:text="@string/media" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill"
+                    android:elevation="16dp"
+                    android:text="@string/files" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill"
+                    android:elevation="16dp"
+                    android:text="@string/links" />
+            </com.google.android.material.tabs.TabLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.motion.widget.MotionLayout>
